@@ -5,13 +5,110 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="bg-gray-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-yellow-600 to-yellow-700 shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="{{ path('home') }}" class="text-white text-2xl font-bold hover:text-orange-200 transition duration-300">
+                        MTU ASBL
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="{{ path('home') }}" class="text-white hover:text-orange-200 transition duration-300 font-medium">Accueil</a>
+                    <a href="{{ path('activities') }}" class="text-white hover:text-orange-200 transition duration-300 font-medium">Activités</a>
+                    <a href="{{ path('about') }}" class="text-white hover:text-orange-200 transition duration-300 font-medium">À propos</a>
+                    <a href="{{ path('contact') }}" class="text-white hover:text-orange-200 transition duration-300 font-medium">Contact</a>
+                    <a href="#donate" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium transition duration-300 transform hover:scale-105 shadow-md">
+                        Faire un don
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-yellow-700 px-6 py-3">
+            <a href="{{ path('home') }}" class="block text-white py-2 hover:text-orange-200">Accueil</a>
+            <a href="{{ path('activities') }}" class="block text-white py-2 hover:text-orange-200">Activités</a>
+            <a href="{{ path('about') }}" class="block text-white py-2 hover:text-orange-200">À propos</a>
+            <a href="{{ path('contact') }}" class="block text-white py-2 hover:text-orange-200">Contact</a>
+            <a href="#donate" class="block bg-orange-500 text-white px-4 py-2 rounded-full my-2 font-medium w-max">Faire un don</a>
+        </div>
+    </nav>
         {% block body %}{% endblock %}
+    <footer class="bg-gradient-to-r from-yellow-700 to-yellow-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">MTU ASBL</h3>
+                    <p class="mb-4">Militant pour la consolidation de la paix et le développement endogène des communautés en RDC.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-orange-300 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="hover:text-orange-300 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="hover:text-orange-300 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="{{ path('home') }}" class="hover:text-orange-300 transition duration-300">Accueil</a></li>
+                        <li><a href="{{ path('activities') }}" class="hover:text-orange-300 transition duration-300">Nos activités</a></li>
+                        <li><a href="{{ path('about') }}" class="hover:text-orange-300 transition duration-300">À propos</a></li>
+                        <li><a href="{{ path('contact') }}" class="hover:text-orange-300 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="mb-2">Ville d'Uvira, quartier Rombe 2, avenue Orthodoxe</p>
+                    <p class="mb-2">Tél: +243 974 821 555</p>
+                    <p class="mb-2">Email: mawanadamutumaini@gmail.com</p>
+                </div>
+            </div>
+            <div class="border-t border-yellow-600 mt-8 pt-8 text-center">
+                <p>&copy; {{ "now"|date("Y") }} MWANADAMU TUMAINI "MTU" ASBL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+        <script>
+            // Mobile menu toggle
+            document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+                document.querySelector('.mobile-menu').classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
     </body>
 </html>

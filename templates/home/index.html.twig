@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - MTU ASBL{% endblock %}
+
+{% block body %}
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-yellow-600 to-orange-500 text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">MWANADAMU TUMAINI "MTU" ASBL</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
+                Militons ensemble pour la consolidation de la paix et le développement endogène des communautés en RDC
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style="animation-delay: 0.4s;">
+                <a href="{{ path('activities') }}" class="bg-white text-yellow-700 hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 shadow-lg">
+                    Nos Activités
+                </a>
+                <a href="#donate" class="bg-transparent border-2 border-white hover:bg-white hover:text-yellow-700 px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105">
+                    Faire un Don
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-yellow-700 mb-6">Qui sommes-nous ?</h2>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        MWANADAMU TUMAINI "MTU" ASBL est une association sans but lucratif basée à Uvira, en République Démocratique du Congo, œuvrant pour la consolidation de la paix et le développement endogène des communautés.
+                    </p>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        Notre mission est de promouvoir les droits humains, la santé pour tous, la protection de l'environnement et le développement durable dans la province du Sud-Kivu.
+                    </p>
+                    <a href="{{ path('about') }}" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-full font-medium transition duration-300 transform hover:scale-105 shadow-md">
+                        En savoir plus
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover-scale">
+                        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="MTU ASBL en action" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-yellow-700 mb-12">Nos Objectifs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Objective 1 -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="bg-yellow-600 text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Droit à l'information</h3>
+                    <p class="text-gray-600 text-center">
+                        Lutter pour le respect du droit à l'information et à l'éducation pour tous les citoyens.
+                    </p>
+                </div>
+                
+                <!-- Objective 2 -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="bg-yellow-600 text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Protection des victimes</h3>
+                    <p class="text-gray-600 text-center">
+                        Protéger les victimes de toutes les formes de violence et de discrimination.
+                    </p>
+                </div>
+                
+                <!-- Objective 3 -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="bg-yellow-600 text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Environnement</h3>
+                    <p class="text-gray-600 text-center">
+                        Militer pour la protection de l'environnement et la promotion de l'agriculture moderne.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Preview -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold text-yellow-700">Nos Activités Récentes</h2>
+                <a href="{{ path('activities') }}" class="text-yellow-600 hover:text-yellow-700 font-medium flex items-center">
+                    Voir toutes les activités
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for activity in activities %}
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-scale">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="{{ activity.title }}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-medium text-yellow-600">{{ activity.location }}</span>
+                            <span class="text-sm text-gray-500">{{ activity.date }}</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">{{ activity.title }}</h3>
+                        <p class="text-gray-600 mb-4">{{ activity.description }}</p>
+                        <a href="{{ path('activities') }}" class="text-yellow-600 hover:text-yellow-700 font-medium flex items-center">
+                            En savoir plus
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation CTA -->
+    <section id="donate" class="py-16 bg-gradient-to-r from-yellow-600 to-orange-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Soutenez nos actions</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Votre don nous permet de continuer nos activités pour la consolidation de la paix et le développement des communautés en RDC.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-white text-yellow-700 hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 shadow-lg">
+                    Faire un don maintenant
+                </a>
+                <a href="{{ path('contact') }}" class="bg-transparent border-2 border-white hover:bg-white hover:text-yellow-700 px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105">
+                    Nous contacter
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}À propos - MTU ASBL{% endblock %}
+
+{% block body %}
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-yellow-600 to-orange-500 text-white py-20 md:py-28">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">À propos de nous</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Découvrez qui nous sommes, notre mission et nos valeurs.
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-yellow-700 mb-6">Notre Association</h2>
+                    <p class="text-gray-700 mb-6">
+                        L'Association est dénommée : MWANADAMU TUMAINI «MTU» a.s.b.l, en sigle.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Le siège social de MTU asbl est établi en République Démocratique du Congo, dans la Province du Sud-Kivu, Ville d'Uvira et pourra, en cas de nécessité être établi en tout autre lieu dans la Province du Sud-Kivu par une décision motivée du Conseil d'Administration approuvée par la réunion mixte des organes de l'Association.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold text-yellow-700 mb-4">Rayon d'action</h3>
+                        <p class="text-gray-700">
+                            MTU a.s.b.l exerce ses activités sur toute l'étendue de la province du Sud-Kivu. Elle peut, en cas d'urgence ou de nécessité humanitaire, organiser des activités dans d'autres provinces du pays sur proposition de la Direction avec l'approbation du Conseil d'administration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="py-12 bg-gray-50 rounded-xl px-8 mb-16">
+                <h2 class="text-3xl font-bold text-center text-yellow-700 mb-12">Notre Mission</h2>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-md p-8 mb-8 hover-scale">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Objectif global</h3>
+                        <p class="text-gray-700">
+                            MTU a.s.b.l a pour objectif global de militer pour la consolidation de la paix en République Démocratique du Congo et pour le développement endogène des communautés tant rurales qu'urbaines.
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Objectifs spécifiques</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl shadow-md p-6 hover-scale">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-600 text-white p-2 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">Lutter pour le respect du Droit à l'information et à l'éducation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-md p-6 hover-scale">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-600 text-white p-2 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">Lutter pour la protection des victimes de toutes les formes de violence et de discrimination</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-md p-6 hover-scale">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-600 text-white p-2 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">Militer pour la protection de l'environnement et la promotion de l'agriculture moderne</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-md p-6 hover-scale">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-600 text-white p-2 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">Participer à la lutte pour la Santé pour tous, pour la prise en charge et la protection des personnes atteintes du VIH/SIDA, du paludisme et toutes autres maladies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-md p-6 hover-scale">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-600 text-white p-2 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">Contribuer à la promotion de l'hygiène publique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="bg-gradient-to-r from-yellow-600 to-orange-500 text-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold mb-6">Coordonnées</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold mb-2">Adresse physique</h4>
+                        <p>Ville d'Uvira, quartier Rombe 2, avenue Orthodoxe</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2">Contact</h4>
+                        <p>Téléphone: +243 974 821 555</p>
+                        <p>Email: mawanadamutumaini@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
